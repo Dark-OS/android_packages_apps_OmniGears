@@ -48,6 +48,9 @@ import java.util.List;
 
 public class BarsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
+    private static final String KEY_PULSE_SETTINGS = "pulse_settings";
+    private PreferenceScreen mPulseSettings;
+
     private static final String TAG = "BarsSettings";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String KEY_ASPECT_RATIO_APPS_ENABLED = "aspect_ratio_apps_enabled";
@@ -75,6 +78,8 @@ public class BarsSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.bars_settings);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mPulseSettings = (PreferenceScreen) findPreference(KEY_PULSE_SETTINGS);
 
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
