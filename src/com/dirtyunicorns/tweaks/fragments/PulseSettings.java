@@ -30,8 +30,8 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.dirtyunicorns.support.preferences.CustomSeekBarPreference;
-import com.dirtyunicorns.support.colorpicker.ColorPickerPreference;
+import com.dirtyunicorns.tweaks.preferences.CustomSeekBarPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class PulseSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
